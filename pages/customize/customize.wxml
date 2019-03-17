@@ -1,0 +1,40 @@
+<swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="#0290ea" autoplay="false" interval="2000" duration="500">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="category-list" id="categoryList">
+  <scroll-view class="scroll-view-x" scroll-x scroll-left="0">
+    <block wx:for="{{categoryList}}" wx:key="{{index}}">
+      <view class="list-item {{item.active ? item.active : ''}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory">
+        <view class="{{item.icon}}"></view>
+        <text class="text">{{item.text}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<view class="product-list">
+   <!-- <scroll-view class="scroll-view-y" scroll-y lower-threshold="100" bindscrolltolower="scrollHandler">  -->
+    <view wx:if="{{productList.length}}">
+      <block wx:for="{{productList}}" wx:key="{{index}}">
+        <view class="list-item" data-id="item.id" bindtap="chooseProduct">
+          <image src="{{item.img}}"></image>
+          <view class="text">
+            <text>{{item.text}}</text>
+            <text class="color-red">{{item.price}}</text>
+          </view>
+        </view>
+      </block>
+      <view class="loading" wx:if="{{loading}}">
+        <view class="iconfont icon-refresh" style='font-size: 60rpx'></view>
+      </view>
+    </view>
+    <view wx:else class="no-data">
+      此处空空如也~
+    </view>
+   <!-- </scroll-view>  -->
+</view>
+<import src="../../template/product/product.wxml" />
+<template is="product" data="{{product}}"/>

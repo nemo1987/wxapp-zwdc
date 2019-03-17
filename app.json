@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/customize/customize",
+    "pages/cart/cart",
+    "pages/account/account"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "指纹定制",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#bbb",
+    "selectedColor": "#0290ea",
+    "list": [
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "color": "#0290ea",
+        "selectedColor": "#0290ea",
+        "iconPath": "assets/images/cart.png",
+        "selectedIconPath": "assets/images/cart-cur.png"
+      },
+      {
+        "pagePath": "pages/customize/customize",
+        "text": "定制",
+        "iconPath": "assets/images/customized.png",
+        "selectedIconPath": "assets/images/customized-cur.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "个人中心",
+        "color": "#bbb",
+        "selectedColor": "#0290ea",
+        "iconPath": "assets/images/account.png",
+        "selectedIconPath": "assets/images/account-cur.png"
+      }
+    ]
+  }
+}

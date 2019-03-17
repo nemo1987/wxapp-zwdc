@@ -1,0 +1,47 @@
+<template name="product">
+  <view class="mask" hidden="{{product.hidden}}" bindtap="hideProduct"></view>
+  <view class="popup popup-product {{product.hidden ? '' : 'active'}}"> 
+    <view class="content">
+      <view class="content-padding">
+        <view class="product-name">
+          <view class="image-box">
+            <image src="/assets/images/products/pro1.jpg"></image>
+          </view>
+          <view class="text-box flex-row flex-x-stretch">
+            <view>
+              <view>女士圆领T恤 </view>
+              <view class="color-red">￥35.00</view>
+            </view>
+            <view>
+              <text class="color-blue">商品详情>></text>
+            </view>
+          </view>
+        </view>
+        <view class="form-item flex-row product-color">
+          <view class="label fixed-item">颜色</view>
+          <view class='content button-box'>
+            <text class="button active">白色</text>
+            <text class="button">黑色</text>
+          </view>
+        </view>
+        <view class="form-item flex-row product-size">
+          <view class="label fixed-item">尺码</view>
+          <view class='content button-box'>
+            <text class='button active'>S</text>
+            <text class='button'>M</text>
+            <text class='button'>X</text>
+            <text class='button'>XL</text>
+            <text class='button'>XXL</text>
+            <text class='button'>XXXL</text>
+          </view>
+          <view class='size-desc'>
+            <text>尺码说明>></text>
+          </view>
+        </view>
+      </view>
+      <view class="footer">
+          <view class="button-block button-primary">确定</view>
+        </view>
+      </view>
+  </view>
+</template>
